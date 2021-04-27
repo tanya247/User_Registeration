@@ -66,7 +66,7 @@ public class UserRegisterationValidation {
 			
 		}
 		else {
-			System.out.println("Phone Number is not valid , Enter correct Phone N");
+			System.out.println("Phone Number is not valid , Enter correct Phone Number");
 			return phoneNumber();
 		}
 	}
