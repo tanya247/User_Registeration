@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class UserRegisterationValidation {
-	
+	static RegexValidation jr = new RegexValidation();
 	
 	public static void main(String args[]) {
 		
@@ -9,7 +9,7 @@ public class UserRegisterationValidation {
 		firstName();
 	}
 	static String firstName() {
-		RegexValidation jr = new RegexValidation();
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter First Name");
 		String FirstName = sc.nextLine();
