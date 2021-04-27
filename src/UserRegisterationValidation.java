@@ -7,6 +7,7 @@ public class UserRegisterationValidation {
 		lastName();
 		emailAddress();
 		phoneNumber();
+		password();
 	}
 	static String firstName() {
 		Scanner sc = new Scanner(System.in);
@@ -67,6 +68,22 @@ public class UserRegisterationValidation {
 		else {
 			System.out.println("Phone Number is not valid , Enter correct Phone N");
 			return phoneNumber();
+		}
+	}
+	static String password() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter password");
+		String Password = sc.nextLine();
+		boolean r = jr.validatePassword(Password);
+		if(r) {
+			System.out.println("Password is valid");
+			return Password;
+			
+		}
+		else {
+			System.out.println("Password is not valid , Enter correct Password");
+			return password();
 		}
 	}
 }
