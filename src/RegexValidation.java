@@ -5,7 +5,7 @@ public class RegexValidation {
 	String validLastName = "^[A-Z]{1}[a-z]{2,}";
 	String validEmailAddress ="^[a-zA-Z0-9]{1,}[.]{0,1}[a-zA-Z0-9]{0,}+@[a-zA-Z0-9]+.[a-zA-Z]{2,3}[.]{0,1}[a-zA-Z]{0,}";
 	String validPhoneNumber = "^[0-9]{0,2}[ ][0-9]{10}";
-	String validPassword = "^((?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,})$";
+	String validPassword = "^(?=.*[0-9])"+"(?=.*[a-z])(?=.*[A-Z])"+ "[@\\-#$%^&+=]{1}"+ "(?=\\S+$).{8,}$";
 	boolean validateFirstName(String FirstName) {
 		Pattern pattern = Pattern.compile(validFirstName);
 		Matcher match = pattern.matcher(FirstName);
