@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class UserRegisterationValidation {
-	
+	static RegexValidation jr = new RegexValidation();
 	
 	public static void main(String args[]) {
 		firstName();
@@ -9,7 +9,6 @@ public class UserRegisterationValidation {
 		phoneNumber();
 	}
 	static String firstName() {
-		RegexValidation jr = new RegexValidation();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter First Name");
 		String FirstName = sc.nextLine();
@@ -25,7 +24,6 @@ public class UserRegisterationValidation {
 		}
 	}
 	static String lastName() {
-		RegexValidation jr = new RegexValidation();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Last Name");
 		String LastName = sc.nextLine();
@@ -41,7 +39,6 @@ public class UserRegisterationValidation {
 		}
 	}
 	static String emailAddress() {
-		RegexValidation jr = new RegexValidation();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Email Address");
 		String EmailAddress = sc.nextLine();
@@ -57,7 +54,7 @@ public class UserRegisterationValidation {
 		}
 	}
 	static String phoneNumber() {
-		RegexValidation jr = new RegexValidation();
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter phone Number");
 		String PhoneNumber = sc.nextLine();
