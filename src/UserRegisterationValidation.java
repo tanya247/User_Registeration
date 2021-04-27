@@ -3,7 +3,10 @@ public class UserRegisterationValidation {
 	static RegexValidation jr = new RegexValidation();
 	
 	public static void main(String args[]) {
-		
+		firstName();
+		lastName();
+		emailAddress();
+		phoneNumber();
 		password();
 	}
 	static String firstName() {
