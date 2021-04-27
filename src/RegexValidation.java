@@ -4,7 +4,7 @@ public class RegexValidation {
 	String validFirstName = "^[A-Z]{1}[a-z]{2,}";
 	String validLastName = "^[A-Z]{1}[a-z]{2,}";
 	String validEmailAddress ="^[a-zA-Z0-9]{1,}[.]{0,1}[a-zA-Z0-9]{0,}+@[a-zA-Z0-9]+.[a-zA-Z]{2,3}[.]{0,1}[a-zA-Z]{0,}";
-	
+	String validPhoneNumber = "^[0-9]{0,2}[ ][0-9]{10}";
 	boolean validateFirstName(String FirstName) {
 		Pattern pattern = Pattern.compile(validFirstName);
 		Matcher match = pattern.matcher(FirstName);
@@ -23,5 +23,12 @@ public class RegexValidation {
 		boolean b = match.matches();
 		return b;
 	}
+	boolean validatePhoneNumber(String PhoneNumber) {
+		Pattern pattern = Pattern.compile(validPhoneNumber);
+		Matcher match = pattern.matcher(PhoneNumber);
+		boolean b = match.matches();
+		return b;
+	}
+	
 	
 }

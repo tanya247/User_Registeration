@@ -6,6 +6,7 @@ public class UserRegisterationValidation {
 		firstName();
 		lastName();
 		emailAddress();
+		phoneNumber();
 	}
 	static String firstName() {
 		RegexValidation jr = new RegexValidation();
@@ -55,5 +56,20 @@ public class UserRegisterationValidation {
 			return emailAddress();
 		}
 	}
-	
+	static String phoneNumber() {
+		RegexValidation jr = new RegexValidation();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter phone Number");
+		String PhoneNumber = sc.nextLine();
+		boolean r = jr.validatePhoneNumber(PhoneNumber);
+		if(r) {
+			System.out.println("Phone Number is valid");
+			return PhoneNumber;
+			
+		}
+		else {
+			System.out.println("Phone Number is not valid , Enter correct Phone N");
+			return phoneNumber();
+		}
+	}
 }
